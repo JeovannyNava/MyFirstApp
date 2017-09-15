@@ -18,16 +18,15 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        boton = (Button) findViewById(R.id.boton);
+       /* boton = (Button) findViewById(R.id.boton);
         imagen = (ImageView) findViewById(R.id.imagen);
 
 
-        boton.setOnClickListener(new View.OnClickListener() {
+       boton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void OnClick(View v){
+            public void onClick(View view) {
 
                 llamarIntent();
-
 
             }
 
@@ -45,12 +44,12 @@ public class MainActivity extends AppCompatActivity  {
 
         @Override
         protected void onActivityResult(int requestCode, int ResultCode, Intent data){
-            if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+            if (requestCode == REQUEST_IMAGE_CAPTURE && ResultCode == RESULT_OK){
 
                 Bundle extras = data.getExtras();
                 Bitmap imageBitmap = (Bitmap) extras.get("data");
-                mImageView.setImageBitmap(imageBitmap);
-            }
+                imagen.setImageBitmap(imageBitmap);
+            }*/
         }
 }
 
