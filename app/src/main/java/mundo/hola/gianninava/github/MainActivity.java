@@ -3,6 +3,7 @@ package mundo.hola.gianninava.github;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,10 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity  {
     private ProgressBar barra;
     private Button boton;
-    private Context context;
+
+    CharSequence text = "Mensaje usando un handler";
+    int duration = Toast.LENGTH_SHORT;
+    Handler miHand;
   ;
 
     @Override
@@ -30,14 +34,22 @@ public class MainActivity extends AppCompatActivity  {
 
                 barra.setVisibility(View.VISIBLE);
 
-                CharSequence text = "Iniciando Sesión";
-                int duration = Toast.LENGTH_SHORT;
 
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        barra.setVisibility(View.INVISIBLE);
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+
+                    }
+                },3000);
+
+
 
             }
         });
+
 
         }
 
