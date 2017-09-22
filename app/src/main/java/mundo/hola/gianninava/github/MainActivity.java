@@ -1,7 +1,6 @@
 package mundo.hola.gianninava.github;
 
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,76 +12,66 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity {
 
 
     private EditText correo;
     private EditText password;
     Button b;
 
-    String c="";
-    String p="";
+    String c = "";
+    String p = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
-
-          correo = (EditText) findViewById(R.id.email);
-          password = (EditText) findViewById(R.id.password);
-          b=(Button)findViewById(R.id.button);
-          c=correo.getText().toString();
-          p=password.getText().toString();
-          b.setOnClickListener(new View.OnClickListener(){
+        correo = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+        b = (Button) findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
 
+                c = correo.getText().toString();
+                p = password.getText().toString();
 
-
-                if ((c == null) || (c.isEmpty()) && ((p == null) || (p.isEmpty()))){
+                if ((c == null) || (c.isEmpty()) && ((p == null) || (p.isEmpty()))) {
 
                     Toast.makeText(MainActivity.this, "no has introducido tus datos", Toast.LENGTH_SHORT).show();
-                }
-
-
-                else{
+                } else {
 
                     validar();
 
                 }
 
 
-
-
             }
         });
 
 
-
-
     }
 
-    public void validar(){
+    public void validar() {
 
 
-        Pattern p_c=Pattern.compile(
+        Pattern p_c = Pattern.compile(
                 "abc");
-        Matcher m_c=p_c.matcher(c);
-        boolean b_c=m_c.find();
+        Matcher m_c = p_c.matcher(c);
+        boolean b_c = m_c.find();
 
-        Pattern p_p=Pattern.compile(
+        Pattern p_p = Pattern.compile(
                 "abc");
-        Matcher m_p=p_p.matcher(p);
-        boolean b_p=m_p.find();
+        Matcher m_p = p_p.matcher(p);
+        boolean b_p = m_p.find();
 
-        if(b_c==true && b_p==true){
+        if (b_c == true && b_p == true) {
 
             Toast.makeText(MainActivity.this, "bien", Toast.LENGTH_SHORT).show();
-        }
-
-
-else {
+        } else {
 
 
             Toast.makeText(MainActivity.this, "mal", Toast.LENGTH_SHORT).show();
