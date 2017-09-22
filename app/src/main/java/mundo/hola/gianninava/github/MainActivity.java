@@ -58,24 +58,32 @@ public class MainActivity extends AppCompatActivity {
     public void validar() {
 
 
-        Pattern p_c = Pattern.compile(
-                "^[_A-Za-z0-9-\\\\+]+(\\\\.[_A-Za-z0-9-]+)*@\"\n" +
-                        "            + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$");
+        Pattern p_c = Pattern.compile("^([0-9a-zA-Z]([_.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+([a-zA-Z]{2,9}.)+[a-zA-Z]{2,3})$");
         Matcher m_c = p_c.matcher(c);
         boolean b_c = m_c.find();
 
-        Pattern p_p = Pattern.compile(
-                "abc");
+        Pattern p_p = Pattern.compile("((?=.*\\\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})");
         Matcher m_p = p_p.matcher(p);
         boolean b_p = m_p.find();
 
-        if (b_c == true && b_p == true) {
+        if (b_c  && b_p ) {
 
-            Toast.makeText(MainActivity.this, "bien", Toast.LENGTH_SHORT).show();
-        } else {
+            Toast.makeText(MainActivity.this, "Bien", Toast.LENGTH_SHORT).show();
+        } else if(!b_c && b_p) {
 
 
-            Toast.makeText(MainActivity.this, "mal", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Correo no Valido", Toast.LENGTH_SHORT).show();
+        }
+
+        else if(b_c && !b_p){
+
+            Toast.makeText(MainActivity.this, "Password invalido", Toast.LENGTH_SHORT).show();
+       }
+
+       else if(!b_c && !b_p){
+
+            Toast.makeText(MainActivity.this,"Ambos formatos son invalidos", Toast.LENGTH_SHORT).show();
+
         }
 
 
