@@ -39,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
                 c = correo.getText().toString();
                 p = password.getText().toString();
 
-                if ((c == null) || (c.isEmpty()) && ((p == null) || (p.isEmpty()))) {
+                if (((c == null) || (c.isEmpty())) || ((p == null) || (p.isEmpty()))) {
 
-                    Toast.makeText(MainActivity.this, "no has introducido tus datos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "No has introducido tus datos", Toast.LENGTH_SHORT).show();
                 } else {
 
                     validar();
@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Pattern p_c = Pattern.compile(
-                "abc");
+                "^[_A-Za-z0-9-\\\\+]+(\\\\.[_A-Za-z0-9-]+)*@\"\n" +
+                        "            + \"[A-Za-z0-9-]+(\\\\.[A-Za-z0-9]+)*(\\\\.[A-Za-z]{2,})$");
         Matcher m_c = p_c.matcher(c);
         boolean b_c = m_c.find();
 
