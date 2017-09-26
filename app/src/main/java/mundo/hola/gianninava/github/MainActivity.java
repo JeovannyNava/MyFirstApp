@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         b = (Button) findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
 
-            @Override
+            //@Override
             public void onClick(View v) {
 
                 c = correo.getText().toString();
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         Matcher m_c = p_c.matcher(c);
         boolean b_c = m_c.find();
 
-        Pattern p_p = Pattern.compile("((?=.*\\\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})");
+        Pattern p_p = Pattern.compile("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$");
         Matcher m_p = p_p.matcher(p);
         boolean b_p = m_p.find();
 
