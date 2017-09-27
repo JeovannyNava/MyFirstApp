@@ -18,12 +18,12 @@ import java.util.regex.Pattern;
 public class MainActivity extends AppCompatActivity {
 
 
-    private EditText correo;
+    private EditText correo; //Variables tipo EditText
     private EditText password;
-    Button b;
 
-    String c="";
-    String p="" ;
+
+    String c;
+    String p;
     String test_email="email@gmail.com";
     String test_password="Contra123";
 
@@ -33,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        View decorView = getWindow().getDecorView();
+// Hide both the navigation bar and the status bar.
+// SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
+// a general rule, you should design your app to hide the status bar whenever you
+// hide the navigation bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
 
 
 
@@ -58,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-          if (valid()) {
+          if (valid()) {//Solo entra aqui si el formato de los datos son validos
 
 
                 if(c.equals(test_email) && p.equals(test_password)) {
@@ -91,6 +100,22 @@ public class MainActivity extends AppCompatActivity {
                     ventana.show();
                 }
 
+                else if(!c.equals(test_email) && p.equals(test_password)){
+
+
+                    AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+                    ventana.setMessage("Email incorrecto");
+                    ventana.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            correo.setText("");
+                            password.setText("");
+                        }
+                    });
+                    ventana.show();
+
+              }
+
                 else if(!c.equals(test_email) && !p.equals(test_password)){
 
 
@@ -121,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         Matcher m_c = p_c.matcher(c);
         boolean b_c = m_c.find();
 
-        Pattern p_p = Pattern.compile("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$");
+        Pattern p_p = Pattern.compile("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,15}[^'\\s]/");
         Matcher m_p = p_p.matcher(p);
         boolean b_p = m_p.find();
 
@@ -143,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
        else if(!b_c && !b_p){
 
-            Toast.makeText(MainActivity.this,"Ambos formatos son invalidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"Correo y Password no tienen un formato valido", Toast.LENGTH_SHORT).show();
 
         }
 
