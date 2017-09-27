@@ -1,7 +1,10 @@
 package mundo.hola.gianninava.github;
 
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,8 +22,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     Button b;
 
-    String c = "";
-    String p = "";
+    String c="";
+    String p="" ;
+    String test_email="email@gmail.com";
+    String test_password="Contra123";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,34 +34,87 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        correo = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.password);
-        b = (Button) findViewById(R.id.button);
-        b.setOnClickListener(new View.OnClickListener() {
-
-            //@Override
-            public void onClick(View v) {
-
-                c = correo.getText().toString();
-                p = password.getText().toString();
-
-                if (((c == null) || (c.isEmpty())) || ((p == null) || (p.isEmpty()))) {
-
-                    Toast.makeText(MainActivity.this, "No has introducido tus datos", Toast.LENGTH_SHORT).show();
-                } else {
-
-                    validar();
-
-                }
 
 
-            }
-        });
 
 
     }
 
-    public void validar() {
+    public void Dialog(View v) {
+
+        correo = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+        c=correo.getText().toString();
+        p=password.getText().toString();
+
+
+        if(c.isEmpty() || p.isEmpty()){
+
+            Toast.makeText(MainActivity.this, "No hay datos", Toast.LENGTH_SHORT).show();
+
+        }
+
+        else {
+
+
+
+          if (valid()) {
+
+
+                if(c.equals(test_email) && p.equals(test_password)) {
+
+
+                    AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+                    ventana.setMessage("Los datos son correctos");
+                    ventana.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            correo.setText("");
+                            password.setText("");
+                        }
+                    });
+                    ventana.show();
+                }
+
+                else if(c.equals(test_email) && !p.equals(test_email)){
+
+
+                    AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+                    ventana.setMessage("Password incorrecto");
+                    ventana.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            correo.setText("");
+                            password.setText("");
+                        }
+                    });
+                    ventana.show();
+                }
+
+                else if(!c.equals(test_email) && !p.equals(test_password)){
+
+
+                    AlertDialog.Builder ventana = new AlertDialog.Builder(this);
+                    ventana.setMessage("Email y password incorrectos");
+                    ventana.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            correo.setText("");
+                            password.setText("");
+                        }
+                    });
+                    ventana.show();
+                }
+
+            }
+        }
+
+
+
+
+    }
+
+    public boolean valid() {
 
 
         Pattern p_c = Pattern.compile("^([0-9a-zA-Z]([_.w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-w]*[0-9a-zA-Z].)+([a-zA-Z]{2,9}.)+[a-zA-Z]{2,3})$");
@@ -69,6 +128,8 @@ public class MainActivity extends AppCompatActivity {
         if (b_c  && b_p ) {
 
             Toast.makeText(MainActivity.this, "Bien", Toast.LENGTH_SHORT).show();
+
+
         } else if(!b_c && b_p) {
 
 
@@ -87,7 +148,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        return b_c & b_p;
     }
+
+
 
 
 }

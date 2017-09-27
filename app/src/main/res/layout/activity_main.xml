@@ -17,6 +17,7 @@
         android:background="#40c4ff"
         android:text="Login"
         android:textSize="18sp"
+        android:onClick="Dialog"
         app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
