@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (b_c  && b_p ) {
 
-            Toast.makeText(MainActivity.this, "Bien", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Datos validos", Toast.LENGTH_SHORT).show();
 
 
         } else if(!b_c && b_p) {
