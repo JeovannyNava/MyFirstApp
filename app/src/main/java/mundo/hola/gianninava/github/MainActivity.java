@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,14 +19,15 @@ import java.util.regex.Pattern;
 public class MainActivity extends AppCompatActivity {
 
 
-    private EditText correo; //Variables tipo EditText
+   /* private EditText correo; //Variables tipo EditText
     private EditText password;
 
 
     String c;
     String p;
     String test_email="email@gmail.com";
-    String test_password="Contra123";
+    String test_password="Contra123";*/
+
 
 
     @Override
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+
        /* View decorView = getWindow().getDecorView();
 // Hide both the navigation bar and the status bar.
 // SYSTEM_UI_FLAG_FULLSCREEN is only available on Android 4.1 and higher, but as
@@ -49,7 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void Dialog(View v) {
+    protected void setStatusBarTranslucent(boolean makeTranslucent) {
+        if (makeTranslucent) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        } else {
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+    }
+    /*public void Dialog(View v) {
 
         correo = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
@@ -175,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
         return b_c & b_p;
     }
-
+*/
 
 
 

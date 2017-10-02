@@ -9,4 +9,5 @@
 <color name="colorSecondaryText">#757575</color>
 <color name="colorIcons">#791212</color>
 <color name="colorDivider">#BDBDBD</color>
+<color name="colorTex">#FFFFFFFF</color>
 </resources>
