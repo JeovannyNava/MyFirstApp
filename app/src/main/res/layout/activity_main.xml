@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/puente"
-    tools:context="mundo.hola.gianninava.github.MainActivity">
+    tools:context="mundo.hola.gianninava.github.MainActivity"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+
+    >
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -25,14 +28,15 @@
         android:id="@+id/button2"
         android:layout_width="109dp"
         android:layout_height="70dp"
-        android:layout_marginLeft="63dp"
+        android:layout_marginLeft="62dp"
         android:background="@drawable/button_bg_transparent"
         android:padding="15dp"
         android:text="Sing Up"
         android:textColor="#FFFFFFFF"
 
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="360dp" />
+        tools:layout_editor_absoluteY="392dp" />
+
 
     <Button
         android:id="@+id/button4"
@@ -44,11 +48,10 @@
         android:text="Login In"
 
         android:textColor="#FFFFFFFF"
-        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintLeft_toRightOf="@+id/button2"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteX="186dp"
-        tools:layout_editor_absoluteY="360dp" />
+        tools:layout_editor_absoluteY="392dp" />
 
 </android.support.constraint.ConstraintLayout>
 
