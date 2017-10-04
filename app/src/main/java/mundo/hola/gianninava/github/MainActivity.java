@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(politicas);
         SpannableString spannableString=new SpannableString(politicas);
 
-        spannableString.setSpan(new ForegroundColorSpan(Color.RED),34,51,0);
-        spannableString.setSpan(new ForegroundColorSpan(Color.RED),52,67,0);
-        spannableString.setSpan(new ForegroundColorSpan(Color.RED),68,88,0);
-        spannableString.setSpan(new ForegroundColorSpan(Color.RED),93,114,0);
+        spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),34,51,0);
+        spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),52,67,0);
+        spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),68,88,0);
+        spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),93,114,0);
         textView.setText(spannableString);
 
     }
