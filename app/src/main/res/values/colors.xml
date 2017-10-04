@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<color name="colorPrimary">#40c4ff</color>
+<color name="colorPrimary">#00a7a6a6</color>
 <color name="colorPrimaryDark">#1e1e1c</color>
 <color name="colorrimaryLight">#FFCDD2</color>
-<color name="colorAccent">#FF4081</color>
+<color name="colorAccent">#4073ff</color>
 <color name="colorPrimaryText">#212121</color>
 <color name="colorSecondaryText">#757575</color>
 <color name="colorIcons">#791212</color>
 <color name="colorDivider">#BDBDBD</color>
 <color name="colorTex">#FFFFFFFF</color>
-
+<color name="azul">#5377da</color>
+<color name="google">#f54141</color>
  </resources>
