@@ -16,12 +16,17 @@ import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
-
+    private SignInButton signInButton;
+    private GoogleApiClient googleApiClient;
+    private GoogleSignInOptions googleSignInOptions;
     private LoginButton loginButton;
     private CallbackManager callbackManager;
     TextView textView;
@@ -39,12 +44,15 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView)findViewById(R.id.textView);
         textView.setText(politicas);
         SpannableString spannableString=new SpannableString(politicas);
-
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),34,51,0);
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),52,67,0);
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),68,88,0);
         spannableString.setSpan(new ForegroundColorSpan(Color.rgb(245,57,54)),93,114,0);
         textView.setText(spannableString);
+
+
+        googleSignInOptions=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+
 
 
 
