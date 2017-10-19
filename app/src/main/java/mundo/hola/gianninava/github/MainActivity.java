@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private CallbackManager callbackManager;
     TextView textView;
     String politicas="By signing up, I agree to Airbnb's Terms of Service, Pryvacy Policy, Guest Refund Policy, and Host Guarantee Terms. ";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,19 +62,25 @@ public class MainActivity extends AppCompatActivity {
 
         callbackManager=CallbackManager.Factory.create();
         loginButton=(LoginButton)findViewById(R.id.login_button);
+
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
+
+                Toast toast= Toast.makeText(getApplicationContext(),"Sesión iniciada con exito",Toast.LENGTH_LONG);
 
             }
 
             @Override
             public void onCancel() {
 
+                Toast toast= Toast.makeText(getApplicationContext(), "Incicio de sesión cancelado", Toast.LENGTH_SHORT);
+
             }
 
             @Override
             public void onError(FacebookException error) {
+                Toast toast= Toast.makeText(getApplicationContext(), "Errror al iniciar sesión", Toast.LENGTH_SHORT);
 
             }
         });
@@ -87,7 +96,9 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requesCode, resultCode, data);
         callbackManager.onActivityResult(requesCode, resultCode, data);
 
-    }
+}
+
+
 
 
 
