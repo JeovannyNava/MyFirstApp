@@ -21,6 +21,7 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -64,9 +65,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         loginButton=(LoginButton)findViewById(R.id.login_facebook1);
 
 
+
         googleSignInOptions= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,googleSignInOptions).build();
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this,this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API,googleSignInOptions)
+                .build();
         signInButton =(SignInButton)findViewById(R.id.signInButton);
+        signInButton.setColorScheme(2);
 
 
 
@@ -128,11 +134,34 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
 
+        if(requestCode==REQUEST_CODE){
+
+
+            GoogleSignInResult result= Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+        }
+
 }
+
+    private void handleSignInResult(GoogleSignInResult result) {
+
+        if(result.isSuccess()){
+           goSesionScreen();
+
+        }else{
+
+            Toast.makeText(this, "No se puede iniciar sesion", Toast.LENGTH_SHORT).show();
+
+
+        }
+    }
+
 
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+
 
     }
 }
