@@ -10,6 +10,6 @@
 <color name="colorIcons">#791212</color>
 <color name="colorDivider">#BDBDBD</color>
 <color name="colorTex">#FFFFFFFF</color>
-<color name="azul">#5377da</color>
-<color name="google">#f54141</color>
+<color name="boton_azul">#5377da</color>
+<color name="boton_rojo">#e9070b</color>
  </resources>
