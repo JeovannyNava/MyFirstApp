@@ -13,10 +13,9 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="154dp"
+        android:layout_width="173dp"
         android:layout_height="56dp"
         android:layout_marginBottom="39dp"
-
         android:layout_marginEnd="32dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="32dp"
@@ -26,31 +25,32 @@
         android:textAlignment="center"
         android:textColor="#FFFFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/button2"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="373dp"
+        tools:layout_editor_absoluteX="179dp" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="154dp"
-        android:layout_height="56dp"
-        android:layout_marginLeft="32dp"
-
+        android:layout_width="163dp"
+        android:layout_height="55dp"
         android:layout_marginStart="32dp"
         android:background="@drawable/button_bg_transparent"
         android:padding="15dp"
         android:text="Sing Up"
         android:textAlignment="center"
         android:textColor="#FFFFFFFF"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginBottom="39dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView" />
+        android:layout_marginBottom="38dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="367dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="61dp"
+        android:layout_marginBottom="59dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -70,13 +70,13 @@
         android:layout_height="102dp"
         app:srcCompat="@drawable/airbnbblanco"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="58dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="89dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="66dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/signInButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toTopOf="@+id/signin_google"
+        app:layout_constraintVertical_bias="0.084" />
 
     <TextView
         android:id="@+id/textView2"
@@ -89,41 +89,48 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="108dp"
         android:layout_marginRight="100dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.568"
-        android:layout_marginEnd="100dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/signin_google"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.facebook.login.widget.LoginButton
-        android:layout_width="351dp"
         android:id="@+id/login_facebook1"
-        android:layout_height="26dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="33dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <com.google.android.gms.common.SignInButton
-        android:layout_width="360dp"
-        android:layout_height="40dp"
-        android:id="@+id/signInButton"
-        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/signin_google"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="18dp"
+        android:background="@color/boton_rojo"
+        android:drawableLeft="@drawable/common_plus_signin_btn_text_dark"
+        android:text="     Sign in whit Google+"
+        android:textAlignment="textStart"
+        android:textColor="#FFFFFFFF"
+        android:textIsSelectable="false"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/login_facebook1"
-        tools:layout_editor_absoluteY="269dp">
-
-    </com.google.android.gms.common.SignInButton>
-
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:drawableLeft="@drawable/common_plus_signin_btn_icon_dark" />
 
 
 </android.support.constraint.ConstraintLayout>

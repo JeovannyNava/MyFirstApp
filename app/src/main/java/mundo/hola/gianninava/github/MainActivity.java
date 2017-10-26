@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.facebook.CallbackManager;
@@ -30,7 +31,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
 
-    private SignInButton signInButton;
+    private Button button;
     private GoogleApiClient googleApiClient;
     private GoogleSignInOptions googleSignInOptions;
     private LoginButton loginButton;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         AppEventsLogger.activateApp(this);
 
         callbackManager=CallbackManager.Factory.create();
-        loginButton=(LoginButton)findViewById(R.id.login_facebook1);
+        loginButton=(LoginButton) findViewById(R.id.login_facebook1);
 
 
 
@@ -71,14 +72,14 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .enableAutoManage(this,this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API,googleSignInOptions)
                 .build();
-        signInButton =(SignInButton)findViewById(R.id.signInButton);
-        signInButton.setColorScheme(2);
+        button = (Button) findViewById(R.id.signin_google);
 
 
 
 
 
-        signInButton.setOnClickListener(new View.OnClickListener() {
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -105,13 +106,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             @Override
             public void onCancel() {
 
-                Toast toast= Toast.makeText(getApplicationContext(), "Incicio de sesión cancelado", Toast.LENGTH_SHORT);
+           Toast.makeText(getApplicationContext(), R.string.com_facebook_loginview_cancel_action, Toast.LENGTH_LONG).show();
 
             }
 
             @Override
             public void onError(FacebookException error) {
-                Toast toast= Toast.makeText(getApplicationContext(), "Error al iniciar sesión", Toast.LENGTH_SHORT);
+             Toast.makeText(getApplicationContext(), "Error al iniciar sesión", Toast.LENGTH_SHORT).show();
 
             }
         });
