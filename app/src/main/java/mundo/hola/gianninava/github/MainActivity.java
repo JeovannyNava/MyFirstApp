@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_main);
 
 
@@ -131,18 +129,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     }
 
 
-    protected void OnActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode==REQUEST_CODE){
-
-
-            GoogleSignInResult result= Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            handleSignInResult(result);
-        }
-
-}
 
     private void handleSignInResult(GoogleSignInResult result) {
 
@@ -163,6 +149,20 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
 
+
+    }
+
+
+    protected void OnActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode==REQUEST_CODE){
+
+
+            GoogleSignInResult result= Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            handleSignInResult(result);
+        }
 
     }
 }
