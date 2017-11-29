@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
 
         FacebookSdk.sdkInitialize(getApplicationContext());
         AppEventsLogger.activateApp(this);
-
         callbackManager=CallbackManager.Factory.create();
         loginButton=(LoginButton) findViewById(R.id.login_facebook1);
 
