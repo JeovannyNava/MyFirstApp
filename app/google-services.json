@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "922708228779",
+    "project_id": "myfirstapp-182708"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922708228779:android:03f24a828e7df3b5",
+        "android_client_info": {
+          "package_name": "mundo.hola.gianninava.github"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922708228779-u11qh78cd2r22a7jm4fiv5cip3606g2q.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "922708228779-rfrqthnclpf0vk0dbscaugh8j62b8qo8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mundo.hola.gianninava.github",
+            "certificate_hash": "b2c77da27f7cf0ee8c6d846a6ea908547a97083f"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIfgIwJ3FRm_tGV3xsvde68Zjlw8TMAZU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
