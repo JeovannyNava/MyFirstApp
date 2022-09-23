@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-23T15:51:22.437Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="GiVyqS3_XeVXwCr5-ILF" version="20.3.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-23T16:05:42.084Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36" etag="Pcc1b_y3jnthK94lyhS1" version="20.3.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="868" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -19,16 +19,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-6" value="Existe" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="160" y="140" width="120" height="100" as="geometry" />
+          <mxGeometry x="160" y="110" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-7" value="La cédula que se ingresó no existe, favor de verificar nuevamente." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="400" y="150" width="200" height="80" as="geometry" />
+          <mxGeometry x="400" y="120" width="230" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-5" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-6" target="4aD9w5RCmc_DI5KrsEfI-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4aD9w5RCmc_DI5KrsEfI-6" value="Datos personales (Nombre y apellido)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="160" y="260" width="120" height="40" as="geometry" />
+        <mxCell id="4aD9w5RCmc_DI5KrsEfI-6" value="&amp;nbsp;Nombre y apellido&lt;br&gt;vs Cédula profesional" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="230" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-7" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-8" target="4aD9w5RCmc_DI5KrsEfI-9">
           <mxGeometry y="10" relative="1" as="geometry">
@@ -39,16 +39,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-8" value="Corresponden con la cédula" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="142.5" y="340" width="155" height="140" as="geometry" />
+          <mxGeometry x="142.5" y="300" width="155" height="140" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-9" value="Los datos del usuario no coinciden con los datos de la cédula ingresada, favor de verificar." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="400" y="357.5" width="210" height="105" as="geometry" />
+          <mxGeometry x="400" y="328.75" width="220" height="82.5" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-11" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-12" target="4aD9w5RCmc_DI5KrsEfI-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-12" value="Profesión seleccionada&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="160" y="520" width="120" height="40" as="geometry" />
+          <mxGeometry x="160" y="470" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-13" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-14" target="4aD9w5RCmc_DI5KrsEfI-15">
           <mxGeometry y="10" relative="1" as="geometry">
@@ -59,27 +59,33 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-14" value="Existe dentro del catalogo Sanofi" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="155" y="610" width="130" height="110" as="geometry" />
+          <mxGeometry x="155" y="540" width="130" height="110" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-15" value="La especialidad relacionada con su cédula profesional, no se admite en la plataforma." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="415" y="622.5" width="230" height="85" as="geometry" />
+          <mxGeometry x="400" y="551.25" width="220" height="87.5" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-17" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-18" target="4aD9w5RCmc_DI5KrsEfI-20">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4aD9w5RCmc_DI5KrsEfI-18" value="Profesión del médico" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="160" y="750" width="120" height="40" as="geometry" />
+        <mxCell id="4aD9w5RCmc_DI5KrsEfI-18" value="Profesión del médico&lt;br&gt;vs &quot;alternativeNames&quot;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="680" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-19" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-20" target="4aD9w5RCmc_DI5KrsEfI-21">
           <mxGeometry y="10" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="4aD9w5RCmc_DI5KrsEfI-20" value="Coincide con alguno de los nombres de la tabla &quot;alternativeNames&quot;" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="130" y="840" width="180" height="190" as="geometry" />
+        <mxCell id="4aD9w5RCmc_DI5KrsEfI-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="4aD9w5RCmc_DI5KrsEfI-20" target="4aD9w5RCmc_DI5KrsEfI-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4aD9w5RCmc_DI5KrsEfI-20" value="La profesión del médico con alguno de los nombres de la tabla &quot;alternativeNames&quot;" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="115" y="770" width="210" height="200" as="geometry" />
         </mxCell>
         <mxCell id="4aD9w5RCmc_DI5KrsEfI-21" value="La especialidad asociada a su cédula profesional no corresponde, favor de verificar." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="415" y="882.5" width="240" height="105" as="geometry" />
+          <mxGeometry x="400" y="823.13" width="220" height="93.75" as="geometry" />
+        </mxCell>
+        <mxCell id="4aD9w5RCmc_DI5KrsEfI-23" value="Valida" style="rounded=1;whiteSpace=wrap;html=1;shadow=0;strokeWidth=1;spacing=6;spacingTop=-4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="125" y="1010" width="190" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
